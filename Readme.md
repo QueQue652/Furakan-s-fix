@@ -1,4 +1,4 @@
-1.1 put kick-multi7.py on your kick-viewer-torproxy-main folder then run it, if it doesn't work follow the instructions below.
+1.1 put kick-multi7.py on your kick-viewer-torproxy-main folder then run it on the terminal, if it doesn't work follow the instructions below.
 1. Open a terminal in the project folder.
 2. Open `Terminalfix.sh` and copy "the entire content" — from the first line `cat > kick-multi7.py << 'KICK_EOF'` down to the final `KICK_EOF` line.
 3. Paste it into the terminal and press **Enter**. This rewrites `kick-multi7.py` byte-for-byte with correct syntax.
