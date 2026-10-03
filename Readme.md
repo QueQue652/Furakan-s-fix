@@ -1,4 +1,4 @@
-(The terminal commands are for macos, if youre windows it may vary)
+(The terminal commands are for macos, if youre on windows it may vary)
 
 1.1 put kick-multi7.py on your kick-viewer-torproxy-main folder then run it on the terminal, if it doesn't work follow the instructions below.
 1. Open a terminal in the project folder.
