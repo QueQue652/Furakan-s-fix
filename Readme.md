@@ -15,7 +15,7 @@
 
 ---
 
-## ⏳ Why reaching 100+ connections might takes a few minutes
+## ⏳ Why reaching 100+ connections might take a couple minutes
 
 This is expected behavior, not a hang. The startup pipeline is deliberately staged:
 
