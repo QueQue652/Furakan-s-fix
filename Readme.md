@@ -15,14 +15,6 @@
 
 ---
 
-## ⏳ Why reaching 100+ connections might take a couple minutes
-
-This is expected behavior, not a hang. The startup pipeline is deliberately staged:
-
-1. **Container provisioning** – Docker builds the proxy image and launches each container with 6 SOCKS ports.
-2. **Network bootstrap (60s wait)** – every proxy instance inside the containers must establish its own encrypted circuits before it can carry traffic.
-3. **IP rotation loop** – edge protection services (Cloudflare) reject many proxy exit IPs on first contact. The script automatically retries and rotates through all available ports until it reaches the API from a clean IP. On a bad network wave this can take dozens of attempts.
-4. **Token pre-fetching** – before any socket is opened, the script fills a pool of ~150+ authenticated handshake tokens, each fetched through a different proxy route.
-5. **Batched socket opening** – connections are opened in small, rate-limited batches per port to keep sessions stable and avoid overload, so the counter climbs gradually rather than instantly.
+## ⏳ It might take a couple of minutes to work (it could reach up 100+ attempts of connection)
 
 Just leave the program running and watch the live stats panel (`Conn`, `Attempts`, `TokenPool`). Connections accumulate steadily once the pool is warm. 
